@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>rest-countries-api-with-color-theme-switcher_tailwindcss</title>
+</head>
+<body class="bg-gray-100 mb-[45px]" >
+    <div class="h-[80px] shadow px-3 bg-[#FFF] ">
+        <div class="container max-w-[1110px] mx-auto flex justify-between items-center bg-[#FFF] py-6">
+            <h1 class="text-black text-2xl font-extrabold ">Where in the world?</h1>
+            <button>
+                <div class="flex items-center text-center gap-x-2">
+                    <img src="./img/oy.svg" alt="oy.svg" class="">
+                    <p class="text-slate-900 text-base	font-semibold ">Dark Mode</p>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="mt-[48px] mb-[48px]">
+        <div class="container max-w-[1110px] sm:justify-center mx-auto flex sm:flex-col md:flex-row gap-y-4 md:justify-between items-center">
+            <!-- Search Container -->
+            <div class="">
+              <form 
+                  class="border-none flex items-center bg-white rounded-lg w-[480px] h-[56px] px-10 py-2 shadow"
+                  onsubmit="handleSearch(event)"
+                >
+                  <!-- Search Icon -->
+                  
+                    <img src="./img/search (1).svg" alt="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mr-[24px]	"> 
+                    
+                
+                  <!-- Input Field -->
+                  <input 
+                    type="text"
+                    placeholder="Search for a country..."
+                    class="border-none bg-white text-black placeholder-black focus:outline-none focus:ring-0 focus:none w-full"
+                    id="search-input"
+                  />
+              </form>
+            </div>
+
+            <div class="relative inline-block text-left border-none">
+                <details class="group">
+                  <summary
+                    class="border-none w-[200px] h-[56px] flex items-center justify-between  px-4 py-2 text-sm font-medium text-slate-800	 bg-white rounded-md cursor-pointer focus:none focus:ring-0 focus:ring-0 focus:none"
+                  >
+                    Filter by Region
+                    <svg class="border-none ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </summary>
+                  <div
+                    class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 group-open:block hidden"
+                  >
+                    <div class="py-1">
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Africa</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">America</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Asia</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Europe</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Oceania</a>
+                    </div>
+                  </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="gap-y-10	 container max-w-[1110px] mx-auto flex sm:justify-center md:justify-between items-center sm:flex-col md:flex-row md:py-0  sm:py-6">
+          <a href="#!">
+            <div class="w-64	 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/germaniya.png" alt="germaniya" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+                  <h4 class="text-black text-lg font-extrabold	leading-[26px]">Germany</h4>
+                  <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span>81,770,900</p>
+                  <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Europe</p>
+                  <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Berlin</p>
+            </div>
+            
+            </div> 
+          </a>
+          <a href="#!">
+            <div class="w-64	 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/1280px-Flag_of_Germany.svg (10).png" alt="germaniya" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+              <h4 class="text-black text-lg font-extrabold	leading-[26px]">United States of America</h4>
+              <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span>323,947,000</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Americas</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Washington, D.C.</p>
+            </div>
+        
+            </div>
+          </a>
+          <a href="#!">
+            <div class="w-64	 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/Braziliya.png" alt="Braziliya" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+              <h4 class="text-black text-lg font-extrabold	leading-[26px]">Brazil</h4>
+              <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span>206,135,893</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Americas</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Brasília</p>
+            </div>
+            </div>
+          </a>
+          <a href="#!">
+            <div class="w-64	 h-[336px] bg-white shadow-lg rounded-lg">
+          <img src="./img/iceland.png" alt="Braziliya" class="h-[160px] w-full	 rounded-t-lg ">
+          <div class="ml-6	mt-6">
+            <h4 class="text-black text-lg font-extrabold	leading-[26px]">Iceland</h4>
+            <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span>334,300</p>
+            <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Europe</p>
+            <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Reykjavík</p>
+          </div>
+        
+        
+            
+            </div>     
+          </a>      
+        </div>
+        <br><br><br>
+        <div class="gap-y-10	 container max-w-[1110px] mx-auto flex sm:justify-center md:justify-between items-center sm:flex-col md:flex-row md:py-0  sm:py-6">
+          <a href="#!">
+            <div class="w-64 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/Afghanistan.png" alt="Afghanistan" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+              <h4 class="text-black text-lg font-extrabold	leading-[26px]">Afghanistan</h4>
+              <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span> 27,657,145</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Asia</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Kabul</p>
+            </div>
+            </div>
+          </a>
+          <a href="#!">
+            <div class="w-64 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/Aland.png" alt="Afghanistan" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+              <h4 class="text-black text-lg font-extrabold	leading-[26px]">Åland Islands</h4>
+              <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span>28,875</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Europe</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Mariehamn</p>
+            </div>
+            </div>
+          </a>
+          <a href="#!">
+            <div class="w-64 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/Albania.png" alt="Afghanistan" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+              <h4 class="text-black text-lg font-extrabold	leading-[26px]">Albania</h4>
+              <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span>2,886,026</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Europe</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Tirana</p>
+            </div>
+            </div>
+          </a>
+          <a href="#!">
+            <div class="w-64 h-[336px] bg-white shadow-lg rounded-lg">
+            <img src="./img/Algeria.png" alt="Afghanistan" class="h-[160px] w-full rounded-t-lg ">
+            <div class="ml-6	mt-6">
+              <h4 class="text-black text-lg font-extrabold	leading-[26px]">Algeria</h4>
+              <p class="mt-4 text-sm leading-4 font-light	"><span class="text-sm	font-semibold	leading-4	">Population: </span> 40,400,000</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Region: </span>Africa</p>
+              <p class="mt-[8px] text-sm leading-4 font-light"><span class="text-sm	font-semibold	leading-4">Capital: </span>Algiers</p>
+            </div>
+            </div>
+          </a>
+        </div>
+    </div>
+
+</body>
+</html>
